@@ -8,6 +8,6 @@ metadata:
 spec:
   containers:
   - name: sample-ctr
-    image: sneka/addressbook:15
+    image: devopstrainer/deploy:v1
     ports:
-      - containerPort: 8080
+      - containerPort: 80

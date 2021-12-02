@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploy1
+  labels:
+    name: app-v1
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: app-v1
+  template:
+    metadata:
+      labels:
+        app: app-v1
+        zone: prod
+    spec:
+      containers:
+      - name: sample-ctr
+        image: nginx
+        ports:
+        - containerPort: 80
