@@ -35,6 +35,6 @@ spec:
               name: pv-storage
       volumes:
       - name: pv-storage
-        persistentVolumeclaim:
-            claimName: test-pvc
+        persistentVolumeClaim:
+          claimName: test-pvc
                    
