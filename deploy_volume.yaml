@@ -21,7 +21,7 @@ spec:
         - containerPort: 80
         env:
           - name: CONF_USER
-            valuefrom:
+            valueFrom:
               configMapKeyRef:
                    name: user-credential
                    key: user
