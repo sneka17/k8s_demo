@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: sample-ctr
-        image: devopstrainer/deploy:v1
+        image: nginx
         ports:
         - containerPort: 80
         env:
@@ -30,4 +30,11 @@ spec:
               secretKeyRef:
                   name: user-pwd
                   key: password
+        volumeMounts:
+            - mountPath: "/usr/share/nginx/html"
+              name: pv-storage
+      volumes:
+      - name: pv-storage
+        persistentVolumeclaim:
+            claimName: test-pvc
                    
