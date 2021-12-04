@@ -28,6 +28,6 @@ spec:
           - name: USR_PASSWD
             valueFrom:
               secretKeyRef:
-                  name: usr_pwd
+                  name: user-pwd
                   key: password
                    
